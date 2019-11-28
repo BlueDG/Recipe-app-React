@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Admin from "./components/Admin";
 import Card from "./components/Card";
 import withFirebase from "./hoc/withFirebase";
+import PropTypes from "prop-types";
 
 const App = ({
   match,
@@ -31,6 +32,15 @@ const App = ({
       />
     </div>
   );
+};
+
+App.propTypes = {
+  match: PropTypes.object.isRequired,
+  recettes: PropTypes.object.isRequired,
+  ajouterRecette: PropTypes.func.isRequired,
+  majRecette: PropTypes.func.isRequired,
+  chargerExemple: PropTypes.func.isRequired,
+  supprimerRecette: PropTypes.func.isRequired
 };
 
 const WrappedComponent = withFirebase(App);
