@@ -1,17 +1,17 @@
-import Rebase from 're-base'
-import firebase from 'firebase/app'
-import 'firebase/database'
+import Rebase from "re-base";
+import firebase from "firebase/app";
+import "firebase/database";
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: 'xxx',
-  authDomain: 'xxx',
-  databaseURL: 'xxx'
-})
+  apiKey: "AIzaSyDEE1p2YXs7srL7XT6j37pGWGaQWzhytYY",
+  authDomain: "recipes-box-gdg-872b3.firebaseapp.com",
+  databaseURL: "https://recipes-box-gdg-872b3.firebaseio.com"
+});
 
-const base = Rebase.createClass(firebaseApp.database())
+const base = Rebase.createClass(firebaseApp.database());
 
 // This is a named export
-export { firebaseApp }
+export { firebaseApp };
 
 // this is a default export
-export default base
+export default base;
